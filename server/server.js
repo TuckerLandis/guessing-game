@@ -4,7 +4,7 @@ const app = express();
 const PORT = 5000;
 
 const guessArray = require('./modules/guess.js');
-const randomNum = require('./modules/random-num');
+const randomNum = require('./modules/random-num.js');
 
 // This must be added before GET & POST routes.
 app.use(bodyParser.urlencoded({extended:true}))

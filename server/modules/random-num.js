@@ -1,5 +1,8 @@
 function randomNum(min, max) {
-    return Math.random() * (max -min) + min
+    return Math.round(Math.random() * (max - min) + min);
 }
 
-module.exports = randomNum.then(response => {
+
+module.exports = {
+    randomNum: randomNum(1, 25)
+};
