@@ -3,7 +3,7 @@ $(document).ready(handleReady);
 function handleReady() {
   console.log("jquery is loaded!")
 
-  generateRand();
+  // generateRand();
 
   // click listeners
   $('#submitGuesses').on('click', handleSubmit);
@@ -20,6 +20,7 @@ function handleSubmit(){
   }
   console.log(guessesObject);
   
+  handleCompare();
 
    $.ajax({
      url: '/guess',
@@ -34,14 +35,35 @@ function handleSubmit(){
 })
 }
 
-function generateRand() {
-  console.log('Generating Number');
+// function generateRand() {
+//   console.log('Generating Number');
 
-    $.ajax({
-      url:'/random-num',
-      method: 'GET'
-    }).then(response => {
-          console.log(response);
+//     $.ajax({
+//       url:'/random-num',
+//       method: 'GET'
+//     }).then(response => {
+//           console.log(response);
   
-    })
-}
+//     })
+// }
+
+function handleCompare() {
+  console.log('in handle compare');
+
+  $.ajax({
+    url: '/winner',
+    method: 'GET'
+  }).then(response => {
+    console.log(response);
+    
+  }).catch(function (error){
+    console.log('errorHandleCompare'); 
+  })
+  } // end handleCompare
+
+
+
+  // get number to show up 
+
+
+  
