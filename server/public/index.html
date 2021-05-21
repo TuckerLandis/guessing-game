@@ -7,13 +7,14 @@
   <title>Guess A Number!</title>
   <script src="vendors/jquery.min.js"></script>
   <script src="scripts/client.js"></script>
+  <link rel="stylesheet" href="vendors/bootstrap.css">
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <h1>YOUR GAME HERE!</h1>
-    <h2>Guess a random number between 1 and 25!</h2>
-    <h2 id="displayWinner"></h2>
+    <h1 class="title-class">Pod 2 Guessing Game</h1>
+    <h2 class="title-class">Guess a random number between 1 and 25!</h2>
+    <h2 class="title-class" id="displayWinner"></h2>
 
   <section class="inputSection">
     <input id="player1In" type="text" placeholder="player1">
@@ -21,34 +22,43 @@
     <input id="player3In" type="text" placeholder="player3">
     <input id="player4In" type="text" placeholder="player4">
     <button id="submitGuesses">Submit</button>
+    <!-- <div id="resetButton"> 
+      
+    </div> -->
 
 
   </section>
 
 <section class="totalGuessesSection">
-  <h2>Total Guesses: 0</h2>
+  <h2 id="guessCounter">Total Guesses: 0</h2>
 
 </section>
 
 <section>
   <h3>Guess History</h3>
 
-  <table>
-    <theader class="guessHistorySection">
+  <table class="center">
+    <theader class="guessHistorySection" >
       <th>Player 1 Guess</th>
-      <th></th>
+      <th>high/low</th>
       <th>Player 2 Guess</th>
-      <th></th>
+      <th>high/low</th>
       <th>Player 3 Guess</th>
-      <th></th>
+      <th>high/low</th>
       <th>Player 4 Guess</th>
-      <th></th>
+      <th>high/low</th>
     </theader>
     <tbody class="historyBodySection">
+        <tr>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        </tr>
     </tbody>
   </table>
 
